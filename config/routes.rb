@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   get "home/about" => "home#about"
+  get "home/final" => "home#final"
 
   get "/login" => "sessions#new"
   post "/login" => "sessions#create", as: :sessions

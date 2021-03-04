@@ -50,7 +50,8 @@ class FoodsController < ApplicationController
   end
 
   def add
-    redirect_to home_about_path "/", notice: "Added successfully!"
+    @food = Food.find(food_item: params[:food_item])
+    render plain: @food
   end
 
   # DELETE /foods/1 or /foods/1.json
