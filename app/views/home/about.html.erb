@@ -1,0 +1,23 @@
+<h4>MENU ITEMS</h4><br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Food item</th>
+      <th scope="col">Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.food_item %></td>
+        <td><%= food.price %></td>
+        <td><%= link_to "ADD", food, method: :add %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br><br>
+
+<%= link_to "My Orders", orders_path, class: "btn btn-primary" %>
